@@ -8,7 +8,9 @@
 
     <!-- Tailwind CSS/ daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>  
+    
     <style>
         
     </style>
@@ -16,11 +18,12 @@
 <body>
     <header>
         <!-- top navbar -->
-        <section class="bg-pink-500 w-full h-7 md:h-10 grid place-items-center ">
+        <section class="bg-[#BF39E3] w-full h-7 md:h-10 grid place-items-center ">
             <marquee class="w-11/12 xl:w-4/5 max-w-screen-xl bg-pink-400 text-md md:text-lg text-white" direction="left">
                 Email: info@alphalife.com.bd, Hot line: 01787683517 (Policy Service Department), 01325436075 (Group Insurance) IP Phone : 09666 400 200
             </marquee>
         </section>
+
         <!-- bottom navbar -->
         <nav class=" bg-gray-300 w-full h-full">
             <div class=" w-11/12 xl:w-4/5 max-w-screen-xl m-auto flex items-center justify-between gap-8">
@@ -48,10 +51,49 @@
         </nav>
     </header>
     <main>
-        <!-- Banner with slider -->
-        <section></section>
+        <!-- banner with slider -->
+        <section id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative overflow-hidden rounded-lg aspect-[5/2] w-full">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GvntOdvz80txbfbW4rz2kAHaEo%26pid%3DApi&f=1&ipt=76227fd48ebb66dced53179ea57554033a02d2c696d46c3d0932f35058366aa8&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.XRJlPamcEoC8ms9BT5wFxAHaEK%26pid%3DApi&f=1&ipt=05f32c2e0c2ebea32b6245e6b991388385d2f184d292af59cfba2c1ffc2d16b7&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DG3PcfNWYPpdaIZAhEcO6gHaEK%26pid%3DApi&f=1&ipt=6cd973ee5cdb789bacd2fe9097ad9c69a9d7a4a0a07297c74f9eb4df7db7f63d&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.cKTq4enAGO_Wg_Omp0ysngHaEK%26pid%3DApi&f=1&ipt=7672420834c92896e51ab2b650b8fab25ed468f5fb07cf098571034779f992db&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.jIGSidW76D_vlYcaeSCbVwHaEo%26pid%3DApi&f=1&ipt=723aacc19817e7e518a956d20585ca9c7bd2575cb82f80d19e55369d0960d8ff&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+                    <!-- <span class="sr-only">Previous</span> -->
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                    <!-- <span class="sr-only">Next</span> -->
+                </span>
+            </button>
+        </section>
+
         <!-- Featured Messeges -->
-        <section></section>
+        <section>
+            <div></div>
+            <div></div>
+        </section>
         <!-- activitys galary -->
         <section></section>
         <!-- mujib corner -->
@@ -64,6 +106,7 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>  
     <script>
         const searchBar = document.getElementById('searchBar');
         const searchValue = document.getElementById('searchValue')
