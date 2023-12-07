@@ -6,38 +6,41 @@
     <title>automan</title>
     <link rel="shortcut icon" src="" type="image/icon.png">
 
-    <!-- Tailwind CSS/ daisyUI -->
+    <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Tailwind CSS/  -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    
+    <!-- Flowbite Style Sheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>  
     
     <style>
         
     </style>
 </head>
 <body>
-    <header>
-        <!-- top navbar -->
-        <section class="bg-[#BF39E3] w-full h-7 md:h-10 grid place-items-center ">
-            <marquee class="w-11/12 xl:w-4/5 max-w-screen-xl bg-pink-400 text-md md:text-lg text-white" direction="left">
-                Email: info@alphalife.com.bd, Hot line: 01787683517 (Policy Service Department), 01325436075 (Group Insurance) IP Phone : 09666 400 200
-            </marquee>
-        </section>
-
-        <!-- bottom navbar -->
-        <nav class=" bg-gray-300 w-full h-full">
-            <div class=" w-11/12 xl:w-4/5 max-w-screen-xl m-auto flex items-center justify-between gap-8">
-                <div class="border border-black w-24 h-28">
+    <!-- Top navbar -->
+    <section class="bg-[#BF39E3] w-full h-7 md:h-10 grid place-items-center ">
+        <marquee class="w-11/12 xl:w-4/5 max-w-screen-xl bg-pink-400 text-sm md:text-lg text-white" direction="left">
+            Email: info@alphalife.com.bd, Hot line: 01787683517 (Policy Service Department), 01325436075 (Group Insurance) IP Phone : 09666 400 200
+        </marquee>
+    </section>
+    <!-- Bottom navbar -->
+    <header class="sticky top-0 z-20">
+        <section class=" bg-gray-300 w-full h-full ">
+            <nav class=" w-11/12 xl:w-4/5 max-w-screen-xl m-auto flex items-center justify-between gap-8">
+                <div class="border border-black w-[8vw] aspect-[6/7] md:w-24 md:h-28">
                     <img src="" alt="">
                 </div>
                 <div id="manuContainer" class="relative flex items-center gap-1">
-                    <div id="manu" class="hidden  lg:block lg:flex lg:gap-1 lg:items-center">
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer0"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200 ">About</a></div>
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200  ">Service</a></div>
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200  ">Media</a></div>
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200  ">Notice</a></div>
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200  ">contact</a></div>
-                        <div class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md lg:bg-pink-200  ">Sign In</a></div>
+                    <div id="manu" class="hidden  lg:block lg:flex lg:gap-1 lg:items-center ">
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">About</a></div>
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">Service</a></div>
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">Media</a></div>
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">Notice</a></div>
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">contact</a></div>
+                        <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">Sign In</a></div>
                     </div>
                     <div id="searchBar" class="hidden flex justify-between overflow-hidden rounded-l-md w-58 h-8">
                         <input id="searchValue" type="text" placeholder="Search..." class="border border-black w-full flex-1 rounded-l-md  focus:outline-none hover:bg-neutral-200 text-inherit pl-2 placeholder-gray-600">
@@ -46,67 +49,135 @@
                     <ion-icon name="search-outline" onclick="SearchPad(this)"  class="btn btn-ghost btn-circle btn-xs p-1"></ion-icon>
                     <ion-icon name="menu-outline" onclick="manu(this)" class="lg:hidden  btn btn-ghost btn-circle btn-xs p-1"></ion-icon>
                 </div>
-            </div>
+            </nav>
             
-        </nav>
+        </section>
     </header>
     <main>
-        <!-- banner with slider -->
-        <section id="default-carousel" class="relative w-full" data-carousel="slide">
-            <!-- Carousel wrapper -->
-            <div class="relative overflow-hidden rounded-lg aspect-[5/2] w-full">
-                <!-- Item 1 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GvntOdvz80txbfbW4rz2kAHaEo%26pid%3DApi&f=1&ipt=76227fd48ebb66dced53179ea57554033a02d2c696d46c3d0932f35058366aa8&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
-                <!-- Item 2 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.XRJlPamcEoC8ms9BT5wFxAHaEK%26pid%3DApi&f=1&ipt=05f32c2e0c2ebea32b6245e6b991388385d2f184d292af59cfba2c1ffc2d16b7&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
-                <!-- Item 3 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DG3PcfNWYPpdaIZAhEcO6gHaEK%26pid%3DApi&f=1&ipt=6cd973ee5cdb789bacd2fe9097ad9c69a9d7a4a0a07297c74f9eb4df7db7f63d&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
-                <!-- Item 4 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.cKTq4enAGO_Wg_Omp0ysngHaEK%26pid%3DApi&f=1&ipt=7672420834c92896e51ab2b650b8fab25ed468f5fb07cf098571034779f992db&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
-                <!-- Item 5 -->
-                <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.jIGSidW76D_vlYcaeSCbVwHaEo%26pid%3DApi&f=1&ipt=723aacc19817e7e518a956d20585ca9c7bd2575cb82f80d19e55369d0960d8ff&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+        <!-- Banner with slider -->
+        <section>
+            <div id="default-carousel" class="relative w-full z-0" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative overflow-hidden aspect-[5/2] w-full">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GvntOdvz80txbfbW4rz2kAHaEo%26pid%3DApi&f=1&ipt=76227fd48ebb66dced53179ea57554033a02d2c696d46c3d0932f35058366aa8&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.XRJlPamcEoC8ms9BT5wFxAHaEK%26pid%3DApi&f=1&ipt=05f32c2e0c2ebea32b6245e6b991388385d2f184d292af59cfba2c1ffc2d16b7&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.DG3PcfNWYPpdaIZAhEcO6gHaEK%26pid%3DApi&f=1&ipt=6cd973ee5cdb789bacd2fe9097ad9c69a9d7a4a0a07297c74f9eb4df7db7f63d&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.cKTq4enAGO_Wg_Omp0ysngHaEK%26pid%3DApi&f=1&ipt=7672420834c92896e51ab2b650b8fab25ed468f5fb07cf098571034779f992db&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.jIGSidW76D_vlYcaeSCbVwHaEo%26pid%3DApi&f=1&ipt=723aacc19817e7e518a956d20585ca9c7bd2575cb82f80d19e55369d0960d8ff&ipo=images" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-1 h-1 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-1 h-1 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-1 h-1 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-1 h-1 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-1 h-1 sm:w-2 sm:h-2 lg:w-3 lg:h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
+                        <!-- <span class="sr-only">Previous</span> -->
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-6 h-6 sm:w-10 sm:h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
+                        <!-- <span class="sr-only">Next</span> -->
+                    </span>
+                </button>
             </div>
-            <!-- Slider indicators -->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-            </div>
-            <!-- Slider controls -->
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/></svg>
-                    <!-- <span class="sr-only">Previous</span> -->
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/></svg>
-                    <!-- <span class="sr-only">Next</span> -->
-                </span>
-            </button>
         </section>
 
         <!-- Featured Messeges -->
-        <section>
-            <div></div>
-            <div></div>
+        <section class="w-11/12 xl:w-4/5 max-w-screen-xl m-auto">
+            <div class=" dark:border-gray-700">
+                <ul class="flex" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                    <li class="w-1/3 h-16 md:h-36 " role="presentation">
+                        <button class="border-4 w-full h-full inline-block p-auto border-3 hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 " id="ceo-tab" data-tabs-target="#ceo-content" type="button" role="tab" aria-controls="profile" aria-selected="true">
+                            <p>CEO's Message</p>
+                        </button>
+                    </li>
+                    <li class="w-1/3 h-16  md:h-36 " role="presentation">
+                        <button class="border-4 w-full h-full inline-block p-auto border-3  hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 " id="chairman-tab" data-tabs-target="#chairman-content" type="button" role="tab" aria-controls="dashboard" aria-selected="false"><p>Chairman's Message</p></button>
+                    </li>
+                    <li class="w-1/3 h-16 md:h-36 " role="presentation">
+                        <button class="border-4 w-full h-full inline-block p-auto border-3  hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 " id="settings-tab" data-tabs-target="#settings-content" type="button" role="tab" aria-controls="settings" aria-selected="false"><p>Settings</p></button>
+                    </li>
+                </ul>
+            </div>
+            <div id="default-tab-content" class="h-fit">
+                <div class="hidden p-2 lg:p-8 bg-blue-600 dark:bg-gray-800 h-full" id="ceo-content" role="tabpanel" aria-labelledby="ceo-tab">
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold">Message from CEO</h2>
+                    <div class="border border-black rounded-2xl p-2 sm:p-0 mt-4 sm:mt-8 lg:mt-10 flex flex-col sm:flex-row gap-2 sm:gap-4 md:gap-8 lg:justify-between">
+                        <img class=" sm:rounded-l-2xl w-3/5 sm:w-2/5 max-w-[380px] aspect-[4/5] m-auto md:mx-0" src="https://www.alphalife.com.bd/storage/files/001.jpg" alt="">
+                        <p class="my-4 mx-2 text-sm text-gray-500 dark:text-gray-400 max-w-[580px] sm:text-base lg:text-lg xl:mr-6">This is some placeholder content the Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aspernatur, accusamus saepe cumque nam natus a, harum exercitationem quisquam minus amet praesentium odit magni recusandae ipsum numquam iure aut sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestiae qui illum libero sint eum laudantium nostrum debitis modi quis expedita voluptate ipsa dolorem placeat, porro molestias quasi nesciunt esse.<br><br><span class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="rounded-md p-1 px-2 py-1 text-md bg-pink-200 hover:bg-pink-400">Learn More...</a>
+                        </span></p>
+                    </div>
+                </div>
+                <div class="hidden p-2 lg:p-8 bg-blue-600 dark:bg-gray-800 h-full" id="chairman-content" role="tabpanel" aria-labelledby="chairman-tab">
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold">Message from Chairman</h2>
+                    <div class="border border-black rounded-2xl p-2 sm:p-0 mt-4 sm:mt-8 lg:mt-10 flex flex-col sm:flex-row gap-2 sm:gap-4 md:gap-8 lg:justify-between">
+                        <img class=" sm:rounded-l-2xl w-3/5 sm:w-2/5 max-w-[380px] aspect-[4/5] m-auto md:mx-0" src="https://www.alphalife.com.bd/storage/files/001.jpg" alt="">
+                        <p class="my-4 mx-2 text-sm text-gray-500 dark:text-gray-400 max-w-[580px] sm:text-base lg:text-lg xl:mr-6">This is some placeholder content the Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aspernatur, accusamus saepe cumque nam natus a, harum exercitationem quisquam minus amet praesentium odit magni recusandae ipsum numquam iure aut sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestiae qui illum libero sint eum laudantium nostrum debitis modi quis expedita voluptate ipsa dolorem placeat, porro molestias quasi nesciunt esse.<br><br><span class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="rounded-md p-1 px-2 py-1 text-md bg-pink-200 hover:bg-pink-400">Learn More...</a>
+                        </span></p>
+                    </div>
+                </div>
+                <div class="hidden p-2 lg:p-8 bg-blue-600 dark:bg-gray-800 h-full" id="settings-content" role="tabpanel" aria-labelledby="settings-tab">
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold">Message from Settings</h2>
+                    <div class="border border-black rounded-2xl p-2 sm:p-0 mt-4 sm:mt-8 lg:mt-10 flex flex-col sm:flex-row gap-2 sm:gap-4 md:gap-8 lg:justify-between">
+                        <img class=" sm:rounded-l-2xl w-3/5 sm:w-2/5 max-w-[380px] aspect-[4/5] m-auto md:mx-0" src="https://www.alphalife.com.bd/storage/files/001.jpg" alt="">
+                        <p class="my-4 mx-2 text-sm text-gray-500 dark:text-gray-400 max-w-[580px] sm:text-base lg:text-lg xl:mr-6">This is some placeholder content the Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aspernatur, accusamus saepe cumque nam natus a, harum exercitationem quisquam minus amet praesentium odit magni recusandae ipsum numquam iure aut sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestiae qui illum libero sint eum laudantium nostrum debitis modi quis expedita voluptate ipsa dolorem placeat, porro molestias quasi nesciunt esse.<br><br><span class="m-1 hover:bg-neutral-200 hover:cursor-pointer"><a href="" class="rounded-md p-1 px-2 py-1 text-md bg-pink-200 hover:bg-pink-400">Learn More...</a>
+                        </span></p>
+                    </div>
+                </div>
+                
+            </div>
         </section>
-        <!-- activitys galary -->
+
+        <!-- Activitys galary -->
         <section></section>
-        <!-- mujib corner -->
-        <section></section>
+        <!-- Mujib corner -->
+        <section></section>  
         <!-- Featured products -->
         <section></section>
     </main>
+    <!-- Footer section -->
     <footer>
-        <!-- footer section -->
+        <div>
+            <div class="" id="">
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
+            </div>
+            <div class="bg-teal-500  p-4" id="newsletter">
+                <h1 class="text-center mb-2">Subscribe to our newsletter</h1>
+                <div class="w-fit m-auto">
+                    <input class=" rounded-md w-44 max-w-md px-2 pt-2 pb-2 text-sm sm:text-base lg:text-lg " type="email" placeholder="E-mail....">
+                    <!-- <div class="m-1 bg-pink-200 hover:cursor-pointer hover:bg-pink-400"><a href="" class="lg:rounded-md p-1 lg:px-2 py-1 lg:text-md ">About</a></div> -->
+                    <button type="button" class="text-sm sm:text-base lg:text-lg border border-neutral-500 rounded-md px-4 py-2 bg-pink-200 hover:bg-pink-400  hover:cursor-pointer"><a href="" class="">Subscribe</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-orange-400 w-full p-1 sm:p-2 lg:p-4 text-center">
+            <p class=" w-fit m-auto text-sm sm:text-base lg:text-lg">@Copyright 1999-2023 by Arif. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <!-- Icon script -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>  
+
+    <!-- Flowbite script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script> 
+    
+    <!-- Vanilla JS script-->
     <script>
         const searchBar = document.getElementById('searchBar');
         const searchValue = document.getElementById('searchValue')
@@ -131,13 +202,13 @@
             if(icon.name === 'menu-outline'){
                 icon.name = 'close-outline';
                 manuBar.classList.remove('hidden');
-                manuBar.classList='absolute flex-row w-24 right-0 top-[100%] bg-blue-300 p-1';
+                manuBar.classList='absolute overflow-visible flex-row w-24 right-0 top-[100%] bg-blue-300 p-1 z-10';
                 
                 
             }
             else{
                 icon.name = 'menu-outline';
-                manuBar.classList.remove('absolute', 'flex-row', 'w-24', 'right-0', 'top-[100%]', 'bg-blue-300', 'p-1');
+                manuBar.classList.remove('absolute', 'flex-row', 'w-24', 'right-0', 'top-[100%]', 'bg-blue-300', 'p-1', 'z-10' );
                 manuBar.classList='hidden lg:block lg:flex lg:gap-1 lg:items-center';
             }
         }
